@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="cviewmodel"
+            type="me.cybersteve.kotlin_pr3.CViewModel" />
+    </data>
+    <FrameLayout
+        android:id="@+id/fragmentiy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fragmentiy">
+
+        <!-- TODO: Update blank fragment layout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/f_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="It's Fragmentiy"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/to_fragmentovich"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To Fragmentovich"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/f_text" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:background="#00ffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{cviewmodel.string}"
+                android:textAlignment="center"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="162dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+
+</layout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentiy">
+
+    <fragment
+        android:id="@+id/fragmentiy"
+        android:name="me.cybersteve.kotlin_pr3.Fragmentiy"
+        android:label="fragment_fragmentiy"
+        tools:layout="@layout/fragment_fragmentiy" >
+        <action
+            android:id="@+id/action_fragmentiy_to_fragmentovich"
+            app:destination="@id/fragmentovich" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentovich"
+        android:name="me.cybersteve.kotlin_pr3.Fragmentovich"
+        android:label="fragment_fragmentovich"
+        tools:layout="@layout/fragment_fragmentovich" >
+        <action
+            android:id="@+id/action_fragmentovich_to_fragmentiy"
+            app:destination="@id/fragmentiy" />
+    </fragment>
+</navigation>
